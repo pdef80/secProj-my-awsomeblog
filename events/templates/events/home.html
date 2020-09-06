@@ -1,13 +1,14 @@
 
 <!doctype html>
 <html lang="en">
+{% load static %}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Album example · Bootstrap 4 на русском</title>
+    <title>My AwesomeBlog</title>
 
     <link rel="canonical" href="https://getbootstrap.ru/docs/4.3/examples/album/">
 
@@ -44,13 +45,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">About me</a>
+                  <a class="nav-link" href="{% static 'AboutMe.rtf' %}">About me</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Facebook</a>
+                  <a class="nav-link" href="https://www.deniscan.com" target="_blank" rel="noopener noreferrer">WebSite</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Blog</a>
+                  <a class="nav-link" href="{% url 'showblog' %}">Blog</a>
                 </li>
               </ul>
             </div>
@@ -65,6 +66,8 @@
       <p>
         <a href="mailto:pdef8085@gmail.com" class="btn btn-primary my-2">Mail me</a>
       </p>
+        <img src="{% static 'IMG-20200802-WA0254.jpg'%}" height="700" width="700" class="img-fluid">
+        
     </div>
   </section>
 
