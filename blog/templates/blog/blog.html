@@ -60,11 +60,11 @@
 <main role="main" class="container">
 <h1 class="pt-5 pl-3 pb-5">Recent post</h1>
     {% for post in posts.all %}
-        <h2>{{ post.post_title }}</h2>
+        <a href=""><h2>{{ post.post_title }}</h2></a>
         <br>
         <img src="{{ post.post_image.url }}" alt="" height="300" width="300" class="img-fluid">
         <br/>
-        <p>{{ post.post_text }}</p>
+    <a href=""><p>{{ post.get_summary }}</p></a>
         {{ post.post_date }}
         <br/>
         <br/>
